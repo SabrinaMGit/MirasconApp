@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".Activity.Emergency">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mirascon_logo_weiss" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/instuction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera_instruction"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/when_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/when_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/wann"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintBottom_toTopOf="@id/when_edittext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/instuction" />
+
+
+    <EditText
+        android:id="@+id/when_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="16"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/where_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/when_text" />
+
+    <TextView
+        android:id="@+id/where_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/where"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintBottom_toTopOf="@+id/where_edittext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/when_edittext" />
+
+
+    <EditText
+        android:id="@+id/where_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="16"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/what_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/where_text" />
+
+    <TextView
+        android:id="@+id/what_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/what"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintBottom_toTopOf="@+id/what_edittext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/where_edittext" />
+
+
+    <EditText
+        android:id="@+id/what_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="16"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/what_text" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/pictureHolderColor"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/send"
+        app:layout_constraintRight_toLeftOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/what_edittext" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:src="@drawable/gesture_tap"
+        app:layout_constraintBottom_toTopOf="@+id/send"
+        app:layout_constraintRight_toLeftOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/what_edittext" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:background="@color/pictureHolderColor"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/what_edittext" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:src="@drawable/gesture_tap"
+        app:layout_constraintBottom_toTopOf="@+id/send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/what_edittext"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/continue_button"
+        android:ems="7"
+        android:text="@string/send"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/relative_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <RelativeLayout
+        android:id="@+id/relative_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/EndColor"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navigation_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_zuruck"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

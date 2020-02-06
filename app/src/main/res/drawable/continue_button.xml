@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+        <shape android:shape="rectangle">
+            <solid android:color="#0f295a" />
+            <corners android:radius="10dp" />
+        </shape>
+
+        <!-- Focused and not pressed -->
+        <item android:color="#1b325e" android:state_focused="true" android:state_pressed="false" />
+
+        <!-- Focused and pressed -->
+        <item android:color="#1b325e" android:state_focused="true" android:state_pressed="true" />
+
+        <!-- Unfocused and pressed -->
+        <item android:color="#1b325e" android:state_focused="false" android:state_pressed="true" />
+
+        <!-- Default color -->
+        <item android:color="#1b325e" />
+    </item>
+</selector>

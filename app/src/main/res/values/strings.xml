@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MIRASCON</string>
+    <string name="emergency_description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</string>
+    <string name="customer_information">Your Data: \nCustomer Identification: 832829 \nLP: 2578 \nFamily Name: Müller</string>
+    <string name="onlineReportDescription">Online report is fast and easy! You can report accidents, vehicle damgage,  roadside service and more!</string>
+    <string name="first_name">First Name:</string>
+    <string name="lp">License Plate:</string>
+    <string name="customer_id">Customer Identification / SS # last four:</string>
+    <string name="continues">CONTINUE</string>
+    <string name="mobile">Phone Number:</string>
+    <string name="email">Email:</string>
+    <string name="takePicture">Upload Photo</string>
+    <string name="camera_instruction">INSTRUCTION WHAT TO MAKE PHOTOS FROM \n- CAR \n- SCENE \n- OTHER</string>
+    <string name="last_name">Last Name :</string>
+    <string name="send">send</string>
+    <string name="wann">When?</string>
+    <string name="what">What?</string>
+    <string name="where">Where?</string>
+    <string name="yourData">Your Data:</string>
+    <string name="introduction">You have an accident and need help? You want to report an accident with Mirascon? You can connect directly to the emergency service</string>
+    <string name="introduction2">You want to report an accident with Mirascon?</string>
+    <string name="introduction3">You can connect directly to the emergency service</string>
+</resources>

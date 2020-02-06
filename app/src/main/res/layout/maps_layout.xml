@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".Activity.GoogleMaps">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/mirascon_logo_weiss" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation_back_label"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/navigation_back_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/EndColor"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navigation_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/arrow_right_48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

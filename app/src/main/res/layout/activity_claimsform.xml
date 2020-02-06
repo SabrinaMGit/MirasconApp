@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".Activity.Emergency">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/mirascon_logo_weiss" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.cardview.widget.CardView xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/first_name_id"
+        cardview:cardCornerRadius="@dimen/_4sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onlineReportDescription"
+            android:textColor="@color/StartColor"
+            android:textSize="@dimen/_16sdp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/first_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/first_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview_id"
+        app:layout_constraintBottom_toTopOf="@id/first_name_edittext"/>
+
+
+    <EditText
+        android:id="@+id/first_name_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="15"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_name_id"
+        app:layout_constraintBottom_toTopOf="@+id/last_name_id"/>
+
+    <TextView
+        android:id="@+id/last_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/last_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_name_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/last_name_edittext"/>
+
+
+    <EditText
+        android:id="@+id/last_name_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="15"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_name_id"
+        app:layout_constraintBottom_toTopOf="@+id/license_plate"/>
+
+    <TextView
+        android:id="@+id/license_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/lp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_name_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/lp_edittext"/>
+
+
+    <EditText
+        android:id="@+id/lp_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="15"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/license_plate"
+        app:layout_constraintBottom_toTopOf="@+id/customer_id"/>
+
+    <TextView
+        android:id="@+id/customer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/customer_id"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lp_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/customer_id_edittext"/>
+
+
+    <EditText
+        android:id="@+id/customer_id_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="15"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customer_id"
+        app:layout_constraintBottom_toTopOf="@+id/mobile_id"/>
+
+
+    <TextView
+        android:id="@+id/mobile_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/mobile"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customer_id_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/mobile_edittext"/>
+
+    <EditText
+        android:id="@+id/mobile_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="15"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_id"
+        app:layout_constraintBottom_toTopOf="@+id/email_id"/>
+
+    <TextView
+        android:id="@+id/email_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_text_claimsform"
+        android:text="@string/email"
+        android:textColor="@color/white"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/email_edittext"/>
+
+    <EditText
+        android:id="@+id/email_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/edittext_claimsform"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="15"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_id"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinues" />
+
+    <Button
+        android:id="@+id/btnContinues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/continue_button"
+        android:ems="7"
+        android:text="@string/continues"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/testsize_claimsform"
+        app:layout_constraintTop_toBottomOf="@+id/email_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/relative_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relative_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/EndColor"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navigation_back"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_zuruck"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

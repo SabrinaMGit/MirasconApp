@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="edittext_claimsform">@dimen/_25sdp</dimen>
+    <dimen name="testsize_claimsform">@dimen/_13sdp</dimen>
+    <dimen name="marginStart_text_claimsform">@dimen/_40sdp</dimen>
+</resources>

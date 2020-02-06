@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_id"
+    android:layout_width="@dimen/_270sdp"
+    android:layout_height="@dimen/_60sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:foreground="?android:attr/selectableItemBackground"
+    cardview:cardBackgroundColor="@android:color/transparent"
+    cardview:cardCornerRadius="@dimen/_1sdp"
+    cardview:cardElevation="@dimen/_1sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/call_img"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/call_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Title"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
